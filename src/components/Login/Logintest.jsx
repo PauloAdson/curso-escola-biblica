@@ -5,7 +5,7 @@ export class Logintest extends React.Component {
     render() {
         return (
             <>
-                <main>
+                <main className="bg-login-cadastro">
                     <div className="container-form-login ">
                         <div className="title-form">
                             <h1>Faça o seu login</h1>

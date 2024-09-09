@@ -13,7 +13,7 @@ export class Home extends React.Component {
                             sobre a Bíblia
                         </h1>
                         <p className="uppercase">Através de lições Bíblicas</p>
-                        <Button estilo="btn-destaque cadastro" link="/cadastro" texto="Começar Agora" />
+                        <Button estilo="btn-destaque cadastro" link="/logintest" texto="Começar Agora" />
                     </section>
                 </main>
 

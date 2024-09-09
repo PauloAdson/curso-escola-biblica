@@ -7,11 +7,13 @@ a.btn-header {
     height: 4rem;
     border-radius: 48px;
     border: var(--borda-btn);
+    text-decoration: none;
 }
 
 a.btn-header.login {
     background-color: var(--cor-secundaria);
     color: var(--cor-primaria);
+    text-decoration: none;
 }
 
 a.btn-header.login:hover {
@@ -29,6 +31,7 @@ a.btn-header.cadastro:hover {
 
 /*Botão de cadastro maior*/
 a.btn-destaque {
+    text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
