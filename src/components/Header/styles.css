@@ -1,0 +1,27 @@
+header {
+    background-color: var(--bg-escuro);
+    height: 8rem;
+    width: 100%;
+}
+
+header nav.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1042px;
+    padding: 0 1.4rem;
+    height: 100%;
+}
+
+nav.menu div.menu-links {
+    gap: 6rem;
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+    div.menu-links .btn-header.login {
+        display: none;
+    }
+}

@@ -1,0 +1,174 @@
+main.bg-main {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 86vh;
+    margin-bottom: 6.4rem;
+}
+
+main.bg-main::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url(https://raw.githubusercontent.com/PauloAdson/escola-biblica/main/src/assets/images/backgroun-principal.png);
+    /* background-image: url(../../assets/images/backgroun-principal.png); */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    z-index: -1;
+}
+
+main section.main-inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+main section.main-inicio h1.titulo {
+    font-size: 48px;
+    line-height: 58px;
+    color: var(--cor-secundaria);
+}
+
+h2.section-titulo {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 6.4rem;
+}
+
+main section.main-inicio p {
+    color: var(--cor-secundaria);
+    font-size: 1.6rem;
+    margin: 12px 0px 20px 0;
+}
+
+section.visao-geral-curso {
+    max-width: 1042px;
+    padding: 0 1.4rem;
+    margin: 0 auto 6.4rem auto;
+}
+
+div.visao-geral-curso__conteudo {
+    display: flex;
+    align-items: center;
+
+    gap: 64px;
+    margin-bottom: 64px;
+}
+
+div.visao-geral-curso__conteudo p.visao-geral-curso__conteudo-paragrafo {
+    font-size: 16px;
+    width: 52.5rem;
+    height: 16.9rem;
+    line-height: 3.4rem;
+}
+
+img.visao-geral-curso__conteudo-img {
+    width: 40%;
+    border-radius: 50%;
+}
+
+/* section duvidas */
+section.duvidas {
+    max-width: 840px;
+    padding: 0 1.4rem;
+    margin: 0 auto 6.4rem auto;
+}
+
+div.container-duvidas__sanfona {
+    cursor: pointer;
+    margin-bottom: 5rem;
+}
+
+div.container-duvidas__sanfona.active {
+    margin-bottom: 0;
+}
+
+div.container-duvidas__sanfona div.duvidas__sanfona {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+span.duvidas__sanfona-numero {
+    color: var(--cor-terciaria);
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-right: 2rem;
+}
+
+div.duvidas__sanfona div.duvidas__sanfona-titulo {
+    display: flex;
+    align-items: center;
+}
+
+div.duvidas__sanfona-titulo h3 {
+    color: var(--cor-primaria-claro);
+    font-size: 2.4rem;
+}
+
+div.container-duvidas__sanfona div.container-conteudo p.conteudo {
+    display: none;
+}
+
+div.container-duvidas__sanfona div.container-conteudo p.conteudo.active {
+    display: block;
+    padding: 28px 0px 50px 58px;
+    color: var(--cor-primaria-claro);
+    font-size: 1.6rem;
+}
+
+section.duvidas a.btn-destaque {
+    margin: 10px auto 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+    main {
+        padding: 0 1.4rem;
+    }
+
+    main section.main-inicio h1.titulo {
+        font-size: 3.6rem;
+    }
+
+    div.visao-geral-curso__conteudo {
+        height: auto;
+    }
+
+    div.visao-geral-curso__conteudo p.visao-geral-curso__conteudo-paragrafo {
+        width: auto;
+        height: auto;
+        text-align: justify;
+    }
+
+    .mobile-none {
+        display: none;
+    }
+
+    div.container-duvidas__sanfona {
+        margin-bottom: 3rem;
+    }
+
+    div.container-duvidas__sanfona div.duvidas__sanfona {
+        height: 4rem;
+    }
+
+    span.duvidas__sanfona-numero {
+        font-size: 2.6rem;
+    }
+
+    div.duvidas__sanfona-titulo h3 {
+        font-size: 1.8rem;
+    }
+
+    div.duvidas__sanfona img {
+        width: 26px;
+    }
+}

@@ -1,0 +1,48 @@
+a.btn-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    width: 14.2rem;
+    height: 4rem;
+    border-radius: 48px;
+    border: var(--borda-btn);
+}
+
+a.btn-header.login {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+}
+
+a.btn-header.login:hover {
+    background-color: var(--cor-secundaria-acao);
+}
+
+a.btn-header.cadastro {
+    background-color: var(--bg-claro);
+    color: var(--cor-secundaria);
+}
+
+a.btn-header.cadastro:hover {
+    background-color: var(--bg-claro-acao);
+}
+
+/*Botão de cadastro maior*/
+a.btn-destaque {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 700;
+    width: 26rem;
+    height: 5rem;
+    border-radius: 48px;
+    background-color: var(--bg-claro);
+    color: var(--cor-secundaria);
+    border: var(--borda-btn);
+}
+
+a.btn-destaque:hover {
+    background-color: var(--bg-claro-acao);
+}
