@@ -55,7 +55,7 @@ div.copyright {
     background-color: var(--bg-claro);
 }
 
-div.copyright p, a {
+div.copyright p, p a {
     color: var(--cor-secundaria);
 }
 

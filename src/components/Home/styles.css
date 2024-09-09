@@ -14,7 +14,7 @@ main.bg-main::before {
     height: 100%;
     top: 0;
     left: 0;
-    background-image: url(https://raw.githubusercontent.com/PauloAdson/escola-biblica/main/src/assets/images/backgroun-principal.png);
+    background-image: url(https://raw.githubusercontent.com/PauloAdson/curso-escola-biblica/main/src/assets/images/backgroun-principal.png);
     /* background-image: url(../../assets/images/backgroun-principal.png); */
     background-repeat: no-repeat;
     background-position: center center;

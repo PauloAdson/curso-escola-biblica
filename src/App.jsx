@@ -33,7 +33,9 @@ function App() {
           } />
 
           <Route path='/logintest' element={
-            <Logintest />
+            <>
+              <Logintest />
+            </>
           } />
         </Routes>
       </BrowserRouter>
