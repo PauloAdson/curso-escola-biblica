@@ -14,13 +14,136 @@ main.bg-login-cadastro::before {
     top: 0;
     left: 0;
     background-image: url(https://raw.githubusercontent.com/PauloAdson/curso-escola-biblica/main/src/assets/images/background-cadastro-login.png);
+    background-color: #F5F5F5;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     z-index: -1;
 }
 
-a {
+div.container-form-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--cor-secundaria);
+    box-shadow: 7px 6px 26px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 45px;
+    padding: 62px;
+    width: 402px;
+    height: 473px;
+    justify-content: center;
+}
+
+div.container-title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+h1.title-form {
+    font-size: 2.4rem;
+    margin-bottom: 4px;
+}
+
+div.title-underline {
+    width: 190px;
+    height: 4px;
+    background: var(--bg-escuro);
+    margin-bottom: 24px;
+}
+
+form.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+form.login-form label {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--cor-primaria);
+}
+
+form.login-form input.input-text {
+    width: 386px;
+    height: 49px;
+    padding: 0 8px 0 8px;
+    border-radius: 18px;
+    border: none;
+    outline: none;
+    background-color: #F2F2F2;
+    margin-bottom: 30px;
+}
+
+.espaco {
+    margin-bottom: 30px;
+}
+
+form.login-form input.checkbox {
+    margin-bottom: 30px;
+}
+
+a.cor-destaque {
     color: var(--cor-terciaria);
     text-decoration: underline;
+}
+
+form.login-form button {
+    width: 250px;
+    height: 49px;
+    border-radius: 48px;
+    border: 1px solid rgba(37, 37, 37, 0.30);
+    background-color: #4CC2E6;
+    color: var(--cor-secundaria);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form.login-form button:hover {
+    background-color: var(--bg-claro-acao);
+}
+
+p.weight, a.weight {
+    font-weight: 700;
+}
+
+@media screen and (max-width:585px) {
+    main.bg-login-cadastro {
+        background-color: #F5F5F5;
+    }
+
+    div.container-form-login {
+        padding: 16px;
+        width: 332px;
+        height: 473px;
+        border-radius: 26px;
+        
+    }
+
+    div.container-title {
+        width: 90%;
+    }
+
+    form.login-form {
+        width: 90%;
+    }
+
+    form.login-form input.input-text {
+        height: 49px;
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    main.bg-login-cadastro {
+        height: 120vh;
+    }
+
+    form.login-form button {
+        width: 90%;
+    }
 }
