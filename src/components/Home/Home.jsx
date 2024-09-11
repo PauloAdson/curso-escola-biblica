@@ -13,7 +13,7 @@ export class Home extends React.Component {
                             sobre a Bíblia
                         </h1>
                         <p className="uppercase">Através de lições Bíblicas</p>
-                        <Button estilo="btn-destaque cadastro" link="/logintest" texto="Começar Agora" />
+                        <Button estilo="btn-destaque cadastro" link="/login" texto="Começar Agora" />
                     </section>
                 </main>
 
@@ -25,7 +25,7 @@ export class Home extends React.Component {
                         </p>
                         <img className="visao-geral-curso__conteudo-img mobile-none" src="https://raw.githubusercontent.com/PauloAdson/curso-escola-biblica/main/src/assets/images/imagem-bliblia.png" alt="imagem de uma bíblia" />
                     </div>
-                    <Button estilo="btn-destaque cadastro" link="/cadastro" texto="Começar Agora" />
+                    <Button estilo="btn-destaque cadastro" link="/login" texto="Começar Agora" />
                 </section>
 
                 <section id="duvidas" className="duvidas">

@@ -1,6 +1,7 @@
 import React from "react";
-// import './styles.css';
+import './styles.css';
 import axios from "axios";
+// import { withRouter } from 'react-router-dom';
 
 export class Login extends React.Component {
 
@@ -16,11 +17,11 @@ export class Login extends React.Component {
 
     handleEmailChange = (event) => {
         this.setState({ email: event.target.value });
-    }
+    };
 
     handlePasswordChange = (event) => {
         this.setState({ password: event.target.value });
-    }
+    };
 
     handleLogin = async (event) => {
         event.preventDefault();
@@ -32,10 +33,11 @@ export class Login extends React.Component {
                     password: this.state.password,
                 });
 
-            this.setState({ user: response.data });
-            console.log('API', response.data);
 
-            this.setState({ errorMessage: '' });
+            this.setState({ user: response.data.nome, errorMessage: '' });
+            localStorage.setItem('user', response.data.nome);
+            // console.log('Nome do usuário:', response.data.nome);
+            window.location.href = '/curso';
 
 
         } catch (error) {
@@ -52,57 +54,66 @@ export class Login extends React.Component {
         }
     };
 
-    handleLogout = async (event) => {
-        event.preventDefault();
-        this.setState({ user: null, email: '', password: '' });
-        window.location.href = '/';
-    }
-
     render() {
         return (
+            <>
+                <main className="bg-login-cadastro">
+                    <div className="container-form-login">
+                        <div className="container-title">
+                            <h1 className="title-form">Faça o seu login</h1>
+                            <div className="title-underline"></div>
+                        </div>
 
-            <div className='login-form-wrap'>
-                {this.state.user == null ? (
-
-                    <>
-                        <h2>Login</h2>
-
-                        <form className='login-form' action="">
+                        <form className="login-form" action="">
+                            <label htmlFor="email">Email*</label>
                             <input
+                                className="input-text"
                                 type="email"
-                                name='email'
-                                placeholder='Email'
+                                name="email"
+                                id="email"
                                 required
                                 onChange={this.handleEmailChange} />
 
+                            <label htmlFor="password">Senha*</label>
                             <input
+                                className="input-text espaco"
                                 type="password"
                                 name="password"
-                                placeholder='Senha'
+                                id="password"
                                 required
                                 onChange={this.handlePasswordChange} />
+                            <div>
+                                <input
+                                    className="espaco"
+                                    type="checkbox"
+                                    name="termos"
+                                    id="termos" />
+
+                                <label htmlFor="termos">Lembrar-me</label>
+                            </div>
 
                             <button
+                                className="espaco"
                                 type="submit"
-                                className='btn-login'
                                 onClick={(e) => this.handleLogin(e)}
                             >Entrar</button>
                         </form>
-                        <p>{this.state.errorMessage}</p>
-                    </>
-                ) : (
 
-                    <div>
-                        <h2>Olá, {this.state.user.nome}</h2>
-                        <button
-                            type="button"
-                            href="./"
-                            className="btn-login"
-                            onClick={(event) => this.handleLogout(event)}>Logout</button>
+                        {/* <p className="espaco erro">{this.state.errorMessage}</p> */}
+
+                        <p className={`espaco erro ${this.state.errorMessage ? '' : 'hidden'}`}>
+                            {this.state.errorMessage}
+                        </p>
+
+                        <p className="espaco weight">Não possui uma conta? <a href="/cadastro" className="cor-destaque">Criar aqui</a></p>
+
+                        <a href="/" className="cor-destaque weight back-start">Voltar ao ínicio</a>
+
                     </div>
-                )}
-            </div>
+                </main>
+            </>
+        );
+    }
+}
 
-        )
-    };
-};
+// export default withRouter(Login);

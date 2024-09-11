@@ -13,8 +13,8 @@ export class Header extends React.Component {
                     </a>
 
                     <div className="menu-links">
-                        <Button estilo="btn-header login" link="/logintest" texto="Entrar" />
-                        <Button estilo="btn-header cadastro" link="./logintest" texto="Cadastrar-se" />
+                        <Button estilo="btn-header login" link="/login" texto="Entrar" />
+                        <Button estilo="btn-header cadastro" link="/login" texto="Cadastrar-se" />
                     </div>
 
                 </nav>

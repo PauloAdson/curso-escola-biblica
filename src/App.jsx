@@ -1,9 +1,12 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Switch } from 'react-router-dom';
 import { Header } from './components/Header/Header';
 import { Home } from './components/Home/Home';
 import { Footer } from './components/Footer/Footer';
+
 import { Login } from './components/Login/Login';
+
 import { Logintest } from './components/Login/Logintest';
+import { HomeCurso } from './Curso/HomeCurso';
 
 function App() {
   return (
@@ -19,10 +22,14 @@ function App() {
           } />
 
           <Route path='/login' element={
-            <>
-              <Login />
-            </>
+            <Login />
           } />
+
+          <Route path='/curso' element={
+            <HomeCurso />
+          } />
+
+
 
           <Route path='*' element={
             <>
