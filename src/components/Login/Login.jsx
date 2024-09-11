@@ -35,6 +35,9 @@ export class Login extends React.Component {
 
 
             this.setState({ user: response.data.nome, errorMessage: '' });
+
+            localStorage.setItem('auth', true);
+
             localStorage.setItem('user', response.data.nome);
             // console.log('Nome do usuário:', response.data.nome);
             window.location.href = '/curso';
@@ -82,7 +85,7 @@ export class Login extends React.Component {
                                 id="password"
                                 required
                                 onChange={this.handlePasswordChange} />
-                            <div>
+                            {/* <div>
                                 <input
                                     className="espaco"
                                     type="checkbox"
@@ -90,7 +93,7 @@ export class Login extends React.Component {
                                     id="termos" />
 
                                 <label htmlFor="termos">Lembrar-me</label>
-                            </div>
+                            </div> */}
 
                             <button
                                 className="espaco"
