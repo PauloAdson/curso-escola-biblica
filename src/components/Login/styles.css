@@ -95,7 +95,6 @@ form.login-form input.checkbox {
     margin-bottom: 30px;
 }
 
-
 a.cor-destaque {
     color: var(--cor-terciaria);
     text-decoration: underline;
@@ -146,7 +145,7 @@ p.weight, a.weight {
     form.login-form input.input-text {
         height: 49px;
         width: 100%;
-        padding: 0;
+        padding-right: 0;
     }
 }
 
