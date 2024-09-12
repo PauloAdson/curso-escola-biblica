@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Router, Routes} from 'react-router-dom';
+import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 import { Header } from './components/Header/Header';
 import { Home } from './components/Home/Home';
 import { Footer } from './components/Footer/Footer';
@@ -6,8 +6,9 @@ import { Footer } from './components/Footer/Footer';
 import { Login } from './components/Login/Login';
 
 // import { Logintest } from './components/Login/Logintest';
-import { HomeCurso } from './Curso/HomeCurso';
+import { HomeCurso } from './components/Curso/HomeCurso';
 import PrivateRoute from './components/Login/PrivateRoute';
+import { Cadastro } from './components/Cadastro/Cadastro';
 
 function App() {
   return (
@@ -30,6 +31,8 @@ function App() {
                 <HomeCurso />
               </PrivateRoute>
             } />
+
+          <Route path='/cadastro' element={<Cadastro />} />
 
           <Route path='*' element={
             <>

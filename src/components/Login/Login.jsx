@@ -85,15 +85,6 @@ export class Login extends React.Component {
                                 id="password"
                                 required
                                 onChange={this.handlePasswordChange} />
-                            {/* <div>
-                                <input
-                                    className="espaco"
-                                    type="checkbox"
-                                    name="termos"
-                                    id="termos" />
-
-                                <label htmlFor="termos">Lembrar-me</label>
-                            </div> */}
 
                             <button
                                 className="espaco"
@@ -101,8 +92,6 @@ export class Login extends React.Component {
                                 onClick={(e) => this.handleLogin(e)}
                             >Entrar</button>
                         </form>
-
-                        {/* <p className="espaco erro">{this.state.errorMessage}</p> */}
 
                         <p className={`espaco erro ${this.state.errorMessage ? '' : 'hidden'}`}>
                             {this.state.errorMessage}
@@ -118,5 +107,3 @@ export class Login extends React.Component {
         );
     }
 }
-
-// export default withRouter(Login);

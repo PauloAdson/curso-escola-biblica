@@ -19,7 +19,9 @@
 .uppercase {
     text-transform: uppercase;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 html,
 body,
 div,

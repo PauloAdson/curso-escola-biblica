@@ -14,7 +14,7 @@ export class Header extends React.Component {
 
                     <div className="menu-links">
                         <Button estilo="btn-header login" link="/login" texto="Entrar" />
-                        <Button estilo="btn-header cadastro" link="/login" texto="Cadastrar-se" />
+                        <Button estilo="btn-header cadastro" link="/cadastro" texto="Cadastrar-se" />
                     </div>
 
                 </nav>

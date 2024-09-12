@@ -1,0 +1,168 @@
+main.bg-login-cadastro {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+main.bg-login-cadastro::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url(https://raw.githubusercontent.com/PauloAdson/curso-escola-biblica/main/src/assets/images/background-cadastro-login.png);
+    background-color: #F5F5F5;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    z-index: -1;
+}
+
+div.container-form-cadastro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--cor-secundaria);
+    box-shadow: 7px 6px 26px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 45px;
+    padding: 62px;
+    width: 402px;
+    height: 530px;
+    justify-content: center;
+}
+
+div.container-title-cadastro {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+h1.title-form-cadastro {
+    font-size: 2.4rem;
+    margin-bottom: 4px;
+}
+
+div.title-underline-cadastro {
+    width: 222px;
+    height: 4px;
+    background: var(--bg-escuro);
+    margin-bottom: 24px;
+}
+
+form.cadastro-form {
+    display: flex;
+    flex-direction: column;
+}
+
+form.cadastro-form label {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--cor-primaria);
+}
+
+form.cadastro-form input.input-text {
+    width: 386px;
+    height: 49px;
+    padding: 0 8px 0 8px;
+    border-radius: 18px;
+    border: none;
+    outline: none;
+    background-color: #F2F2F2;
+    margin-bottom: 30px;
+}
+
+.espaco {
+    margin-bottom: 30px;
+}
+
+.hidden {
+    display: none;
+}
+
+.success {
+    color: #008a39;
+    font-weight: 900;
+    text-decoration: underline;
+    font-size: 18px;
+}
+
+.erro {
+    color: #ff0000;
+    font-weight: 900;
+    text-decoration: underline;
+    font-size: 18px;
+}
+
+form.cadastro-form input.checkbox {
+    margin-bottom: 30px;
+}
+
+
+a.cor-destaque {
+    color: var(--cor-terciaria);
+    text-decoration: underline;
+}
+
+form.cadastro-form button {
+    width: 250px;
+    height: 49px;
+    border-radius: 48px;
+    border: 1px solid rgba(37, 37, 37, 0.30);
+    background-color: #4CC2E6;
+    color: var(--cor-secundaria);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form.cadastro-form button:hover {
+    background-color: var(--bg-claro-acao);
+}
+
+p.weight, a.weight {
+    font-weight: 700;
+}
+
+@media screen and (max-width:585px) {
+    main.bg-login-cadastro {
+        background-color: #F5F5F5;
+    }
+
+    div.container-form-cadastro {
+        padding: 16px;
+        width: 332px;
+        height: 610px;
+        border-radius: 26px;
+
+    }
+
+    div.container-title-cadastro {
+        width: 90%;
+    }
+
+    form.cadastro-form {
+        width: 90%;
+    }
+
+    form.cadastro-form input.input-text {
+        height: 49px;
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    main.bg-login-cadastro {
+        height: 120vh;
+    }
+
+    form.cadastro-form button {
+        width: 90%;
+    }
+}
