@@ -1,0 +1,59 @@
+header.curso_header {
+    background-color: var(--bg-escuro);
+    height: 8.5vh;
+    width: 100%;
+}
+
+header.curso_header nav.curso_menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    /* width: 100%; */
+    height: 100%;
+    padding: 0 3.8rem;
+}
+
+div.curso_usuario span.curso_usuario-nome {
+
+    color: var(--cor-secundaria);
+    font-weight: 700;
+    letter-spacing: 1.26px;
+
+}
+
+aside.curso_menu-lateral {
+    width: 162px;
+    height: 91.5vh;
+    padding-left: 38px;
+    background-color: var(--bg-escuro);
+    position: fixed;
+    top: 8.5vh;
+    left: 0;
+
+}
+
+aside.curso_menu-lateral nav.curso_menu-lateral-nav {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    flex-direction: column;
+}
+
+nav.curso_menu-lateral-nav div.curso_menu-container-icone {
+    display: flex;
+    gap: 4px;
+}
+
+img.curso_menu-icone {
+    width: 16px;
+
+}
+
+
+@media screen and (max-width: 767px) {
+    div.menu-links .btn-header.login {
+        display: none;
+    }
+}

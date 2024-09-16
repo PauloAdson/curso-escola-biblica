@@ -6,7 +6,7 @@ import { Footer } from './components/Footer/Footer';
 import { Login } from './components/Login/Login';
 
 // import { Logintest } from './components/Login/Logintest';
-import { HomeCurso } from './components/Curso/HomeCurso';
+import { CursoHome } from './components/Curso/CursoHome';
 import PrivateRoute from './components/Login/PrivateRoute';
 import { Cadastro } from './components/Cadastro/Cadastro';
 
@@ -28,7 +28,7 @@ function App() {
           <Route path='/curso'
             element={
               <PrivateRoute>
-                <HomeCurso />
+                <CursoHome />
               </PrivateRoute>
             } />
 

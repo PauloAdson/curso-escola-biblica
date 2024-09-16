@@ -1,8 +1,7 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { HeaderCurso } from "./HeaderCurso";
+import { CursoMenu } from "./CursoMenu";
 
-export class HomeCurso extends React.Component {
+export class CursoHome extends React.Component {
 
     constructor() {
         super();
@@ -22,15 +21,13 @@ export class HomeCurso extends React.Component {
 
         return (
             <>
-                <HeaderCurso />
-
-                <h3>Olá, {this.state.user} </h3>
-                <p>teste</p>
-                <button
+                <CursoMenu />
+ 
+                {/* <button
                     type="button"
                     href='./'
                     onClick={(event) => this.handleLogout(event)}
-                >Sair</button>
+                >Sair</button> */}
 
             </>
         );
