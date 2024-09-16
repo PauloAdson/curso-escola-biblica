@@ -6,7 +6,7 @@ import { Button } from "../Button/Button";
 export class Header extends React.Component {
     render() {
         return (
-            <header id="inicio">
+            <header className="header-inicio" id="inicio">
                 <nav className="menu">
                     <a href="./">
                         <img src={logo} alt="Logo EBD" />

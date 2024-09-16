@@ -1,4 +1,6 @@
 import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HeaderCurso } from "./HeaderCurso";
 
 export class HomeCurso extends React.Component {
 
@@ -20,6 +22,8 @@ export class HomeCurso extends React.Component {
 
         return (
             <>
+                <HeaderCurso />
+
                 <h3>Olá, {this.state.user} </h3>
                 <p>teste</p>
                 <button
@@ -27,6 +31,7 @@ export class HomeCurso extends React.Component {
                     href='./'
                     onClick={(event) => this.handleLogout(event)}
                 >Sair</button>
+
             </>
         );
     }
