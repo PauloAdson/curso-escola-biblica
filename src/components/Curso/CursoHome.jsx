@@ -9,13 +9,6 @@ export class CursoHome extends React.Component {
             user: localStorage.getItem('user')
         };
     }
-    handleLogout = async (event) => {
-        event.preventDefault();
-        localStorage.removeItem('user');
-        localStorage.removeItem('auth');
-        this.setState({ user: null, email: '', password: '' });
-        window.location.href = '/login';
-    }
 
     render() {
 

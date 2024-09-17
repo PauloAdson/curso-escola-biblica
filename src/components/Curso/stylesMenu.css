@@ -15,10 +15,16 @@ header.curso_header nav.curso_menu {
 }
 
 div.curso_usuario span.curso_usuario-nome {
-
     color: var(--cor-secundaria);
     font-weight: 700;
     letter-spacing: 1.26px;
+    margin-right: 8px;
+}
+
+i.curso_usuario-icone {
+    font-size: 18px;
+    color: var(--cor-secundaria);
+
 
 }
 
@@ -30,15 +36,13 @@ aside.curso_menu-lateral {
     position: fixed;
     top: 8.5vh;
     left: 0;
-
 }
 
 aside.curso_menu-lateral nav.curso_menu-lateral-nav {
-    height: 100%;
     display: flex;
     justify-content: space-around;
-
     flex-direction: column;
+    height: 100%;
 }
 
 nav.curso_menu-lateral-nav div.curso_menu-container-icone {
@@ -46,9 +50,20 @@ nav.curso_menu-lateral-nav div.curso_menu-container-icone {
     gap: 4px;
 }
 
-img.curso_menu-icone {
-    width: 16px;
+a.curso_menu-links {
+    color: var(--cor-secundaria);
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+}
 
+i.curso_menu-links {
+    font-size: 16px;
+    color: var(--cor-secundaria);
+}
+
+i.rotate-logout {
+    transform: rotate(180deg);
 }
 
 

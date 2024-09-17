@@ -1,7 +1,6 @@
 import React from "react";
 import logo from '../../assets/images/logo.svg';
 import './stylesMenu.css';
-import iconHouse from '../../assets/images/house-solid.svg';
 
 export class CursoMenu extends React.Component {
     constructor() {
@@ -10,6 +9,17 @@ export class CursoMenu extends React.Component {
             user: localStorage.getItem('user')
         };
     }
+
+    handleLogout = async (event) => {
+        event.preventDefault();
+        localStorage.removeItem('user');
+        localStorage.removeItem('auth');
+        this.setState({ user: null, email: '', password: '' });
+        window.location.href = '/login';
+    }
+
+
+
     render() {
         return (
             <>
@@ -20,20 +30,35 @@ export class CursoMenu extends React.Component {
                         </a>
 
                         <div className="curso_usuario">
-                            <span className="curso_usuario-nome">Olá, {this.state.user}</span>
+                            <span className="curso_usuario-nome">Olá, {this.state.user} </span><i class="fa-solid fa-user curso_usuario-icone" />
                         </div>
                     </nav>
                 </header>
                 <aside className="curso_menu-lateral">
                     <nav className="curso_menu-lateral-nav">
+
                         <div className="curso_menu-container-icone">
-                            <img src={iconHouse} alt="icone de uma casa" className="curso_menu-icone" />
-                            <a href="" className="curso_menu-links">Início</a>
+                            <a href="/curso" className="curso_menu-links"><i className="fa-solid fa-house curso_menu-links" /> Início</a>
                         </div>
-                        <a href="" className="curso_menu-links">Aulas</a>
-                        <a href="" className="curso_menu-links">Atividades</a>
-                        <a href="" className="curso_menu-links">Ajuda</a>
-                        <a href="" className="curso_menu-links">Sair</a>
+
+                        <div className="curso_menu-container-icone">
+                            <a href="" className="curso_menu-links"><i class="fa-solid fa-book curso_menu-links" /> Aulas</a>
+                        </div>
+
+                        <div className="curso_menu-container-icone">
+                            <a href="" className="curso_menu-links"><i class="fa-solid fa-pen curso_menu-links" /> Atividades</a>
+                        </div>
+
+                        <div className="curso_menu-container-icone">
+                            <a href="" className="curso_menu-links"><i class="fa-solid fa-circle-info curso_menu-links" /> Ajuda</a>
+                        </div>
+
+                        <div className="curso_menu-container-icone">
+                            <a className="curso_menu-links"
+                                onClick={(event) => this.handleLogout(event)}
+                            ><i class="fa-solid fa-right-from-bracket curso_menu-links rotate-logout" /> Sair</a>
+                        </div>
+
                     </nav>
                 </aside>
             </>
