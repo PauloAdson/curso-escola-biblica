@@ -50,7 +50,7 @@ export class Cadastro extends React.Component {
                         </div>
 
                         <form className="cadastro-form" onSubmit={this.handleSubmit}>
-                            <label htmlFor="name">Primeiro e segundo nome*</label>
+                            <label htmlFor="name">Nome*</label>
                             <input
                                 className="input-text"
                                 type="text"
