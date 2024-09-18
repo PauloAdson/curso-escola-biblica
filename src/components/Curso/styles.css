@@ -1,0 +1,24 @@
+main.curso_main {
+    margin-left: 200px;
+    margin-top: 8.5vh;
+    padding: 38px;
+    background: #F5F5F5;
+}
+
+main.curso_main::-webkit-scrollbar {
+    width: 10px;
+}
+
+main.curso_main::-webkit-scrollbar-thumb {
+    background-color: aqua;
+    border-radius: 5px;
+}
+
+main.curso_main h1.curso_titulo {
+    font-size: 2rem;
+    margin-bottom: 38px;
+}
+
+div.curso_bloco-container {
+    height: 272px;
+}

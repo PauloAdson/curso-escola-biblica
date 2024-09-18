@@ -2,6 +2,9 @@ header.curso_header {
     background-color: var(--bg-escuro);
     height: 8.5vh;
     width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 header.curso_header nav.curso_menu {
@@ -24,13 +27,11 @@ div.curso_usuario span.curso_usuario-nome {
 i.curso_usuario-icone {
     font-size: 18px;
     color: var(--cor-secundaria);
-
-
 }
 
 aside.curso_menu-lateral {
     width: 162px;
-    height: 91.5vh;
+    height: calc(100vh - 8.5vh);
     padding-left: 38px;
     background-color: var(--bg-escuro);
     position: fixed;
@@ -50,16 +51,22 @@ nav.curso_menu-lateral-nav div.curso_menu-container-icone {
     gap: 4px;
 }
 
-a.curso_menu-links {
+.curso_menu-links {
     color: var(--cor-secundaria);
     text-transform: uppercase;
     font-weight: 700;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-i.curso_menu-links {
-    font-size: 16px;
-    color: var(--cor-secundaria);
+.curso_menu-links:hover {
+    color: var(--cor-terciaria);
+}
+
+.curso_menu-links.active {
+    color: #00ffff;
 }
 
 i.rotate-logout {

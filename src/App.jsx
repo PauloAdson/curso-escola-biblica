@@ -32,6 +32,13 @@ function App() {
               </PrivateRoute>
             } />
 
+          <Route path='/aulas'
+            element={
+              <PrivateRoute>
+                <CursoHome />
+              </PrivateRoute>
+            } />
+
           <Route path='/cadastro' element={<Cadastro />} />
 
           <Route path='*' element={

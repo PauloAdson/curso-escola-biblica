@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import logo from '../../assets/images/logo.svg';
 import './stylesMenu.css';
 
@@ -25,9 +26,9 @@ export class CursoMenu extends React.Component {
             <>
                 <header className="curso_header">
                     <nav className="curso_menu">
-                        <a href="/curso">
+                        <NavLink to='/curso'>
                             <img src={logo} alt="Logo EBD" />
-                        </a>
+                        </NavLink>
 
                         <div className="curso_usuario">
                             <span className="curso_usuario-nome">Olá, {this.state.user} </span><i class="fa-solid fa-user curso_usuario-icone" />
@@ -38,25 +39,33 @@ export class CursoMenu extends React.Component {
                     <nav className="curso_menu-lateral-nav">
 
                         <div className="curso_menu-container-icone">
-                            <a href="/curso" className="curso_menu-links"><i className="fa-solid fa-house curso_menu-links" /> Início</a>
+                            <NavLink to='/curso' className='curso_menu-links' activeClassName='active'>
+                                <i className="fa-solid fa-house" /> Início
+                            </NavLink>
                         </div>
 
                         <div className="curso_menu-container-icone">
-                            <a href="" className="curso_menu-links"><i class="fa-solid fa-book curso_menu-links" /> Aulas</a>
+                            <NavLink to='/aulas' className='curso_menu-links' activeClassName='active'>
+                                <i className="fa-solid fa-book" /> Aulas
+                            </NavLink>
                         </div>
 
                         <div className="curso_menu-container-icone">
-                            <a href="" className="curso_menu-links"><i class="fa-solid fa-pen curso_menu-links" /> Atividades</a>
+                            <NavLink to='/atividades' className='curso_menu-links' activeClassName='active'>
+                                <i className="fa-solid fa-pen" /> Atividades
+                            </NavLink>
                         </div>
 
                         <div className="curso_menu-container-icone">
-                            <a href="" className="curso_menu-links"><i class="fa-solid fa-circle-info curso_menu-links" /> Ajuda</a>
+                            <NavLink to='/ajuda' className='curso_menu-links' activeClassName='active'>
+                                <i className="fa-solid fa-circle-info" /> Ajuda
+                            </NavLink>
                         </div>
 
                         <div className="curso_menu-container-icone">
-                            <a className="curso_menu-links"
-                                onClick={(event) => this.handleLogout(event)}
-                            ><i class="fa-solid fa-right-from-bracket curso_menu-links rotate-logout" /> Sair</a>
+                            <NavLink to='/login' className='curso_menu-links' activeClassName='active' onClick={(event) => this.handleLogout(event)}>
+                                <i className="fa-solid fa-right-from-bracket rotate-logout" /> Sair
+                            </NavLink>
                         </div>
 
                     </nav>
