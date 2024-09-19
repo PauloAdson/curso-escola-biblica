@@ -5,6 +5,7 @@ header.curso_header {
     position: fixed;
     top: 0;
     left: 0;
+    box-sizing: border-box;
 }
 
 header.curso_header nav.curso_menu {
@@ -12,7 +13,8 @@ header.curso_header nav.curso_menu {
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
-    /* width: 100%; */
+    box-sizing: border-box;
+    width: 100%;
     height: 100%;
     padding: 0 3.8rem;
 }
@@ -30,7 +32,8 @@ i.curso_usuario-icone {
 }
 
 aside.curso_menu-lateral {
-    width: 162px;
+    width: 200px;
+    box-sizing: border-box;
     height: calc(100vh - 8.5vh);
     padding-left: 38px;
     background-color: var(--bg-escuro);

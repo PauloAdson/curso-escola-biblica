@@ -2,7 +2,9 @@
 
 :root {
     --font: 'Inria Sans', sans-serif;
-    font-size: 62.5%; /*1rem vale 10px*/
+    font-size: 62.5%;
+    /*1rem vale 10px*/
+    --bg-geral: #F5F5F5;
     --cor-primaria: #252525;
     --cor-primaria-claro: #3E3E3E;
     --cor-secundaria: #FFFFFF;
@@ -19,9 +21,11 @@
 .uppercase {
     text-transform: uppercase;
 }
+
 html {
     scroll-behavior: smooth;
 }
+
 html,
 body,
 div,
@@ -130,6 +134,7 @@ body {
     line-height: 1;
     font-family: var(--font);
     color: var(--cor-primaria);
+    background-color: var(--bg-geral);
 }
 
 ol,
