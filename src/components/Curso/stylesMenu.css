@@ -76,7 +76,6 @@ i.rotate-logout {
     transform: rotate(180deg);
 }
 
-
 @media screen and (max-width: 767px) {
     div.menu-links .btn-header.login {
         display: none;
