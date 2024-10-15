@@ -60,52 +60,6 @@ export class Login extends React.Component {
     render() {
         return (
             <>
-                {/* <main className="bg_cadastro-login">
-                    <div className="container-form-login">
-                        <div className="container-title">
-                            <h1 className="title-form">Faça o seu login</h1>
-                            <div className="title-underline"></div>
-                        </div>
-
-                        <form className="login-form" action="">
-                            <label htmlFor="email">Email*</label>
-                            <input
-                                className="input-text"
-                                type="email"
-                                name="email"
-                                id="email"
-                                required
-                                onChange={this.handleEmailChange} />
-
-                            <label htmlFor="password">Senha*</label>
-                            <input
-                                className="input-text espaco"
-                                type="password"
-                                name="password"
-                                id="password"
-                                required
-                                onChange={this.handlePasswordChange} />
-
-                            <button
-                                className="espaco"
-                                type="submit"
-                                onClick={(e) => this.handleLogin(e)}
-                            >Entrar</button>
-                        </form>
-
-                        <p className={`espaco erro ${this.state.errorMessage ? '' : 'hidden'}`}>
-                            {this.state.errorMessage}
-                        </p>
-
-                        <p className="espaco weight">Não possui uma conta? <a href="/cadastro" className="cor-destaque">Criar aqui</a></p>
-
-                        <a href="/" className="cor-destaque weight back-start">Voltar ao ínicio</a>
-
-                    </div>
-                </main> */}
-
-
-
                 <main className="bg_cadastro-login">
                     <div className="login_container">
                         <div className="login_container-title">
