@@ -3,11 +3,12 @@
 :root {
     --font: 'Inria Sans', sans-serif;
     font-size: 62.5%;
-    /*1rem vale 10px*/
+    /*1rem vale "10px"*/
     --bg-geral: #F5F5F5;
     --cor-primaria: #252525;
     --cor-primaria-claro: #3E3E3E;
     --cor-secundaria: #FFFFFF;
+    --cor-secundaria-claro: #F2F2F2;
     --cor-secundaria-acao: #d7f6ff;
     --cor-secundaria-escuro: #dadada;
     --cor-terciaria: #4CC2E6;
@@ -110,7 +111,7 @@ video {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     vertical-align: baseline;
     text-decoration: none;
 }

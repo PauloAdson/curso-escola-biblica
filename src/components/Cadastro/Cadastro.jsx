@@ -19,9 +19,9 @@ export class Cadastro extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        const { name, email, password } = this.state;
+        const { name, email, telefone, password } = this.state;
 
-        axios.post('http://localhost:3001/cadastro', { name, email, password })
+        axios.post('http://localhost:3001/cadastro', { name, email, telefone, password })
             .then(response => {
                 this.setState({ successMessage: 'Cadastro realizado com sucesso! ', errorMessage: '' });
 
@@ -42,68 +42,87 @@ export class Cadastro extends React.Component {
     render() {
         return (
             <>
-                <main className="bg-login-cadastro">
-                    <div className="container-form-cadastro">
-                        <div className="container-title-cadastro">
+                <main className="bg_cadastro-login">
+                    <div className="cadastro_container">
+                        <div className="cadastro_container-title">
                             <h1 className="title-form">Faça o seu cadastro</h1>
                             <div className="title-underline-cadastro"></div>
                         </div>
 
-                        <form className="cadastro-form" onSubmit={this.handleSubmit}>
-                            <label htmlFor="name">Nome*</label>
-                            <input
-                                className="input-text"
-                                type="text"
-                                name="name"
-                                id="name"
-                                value={this.state.name}
-                                onChange={this.handleInputChange}
-                                required
-                            />
+                        <form className="cadastro_form" onSubmit={this.handleSubmit}>
+                            <div className="cadastro_form-grupo">
+                                <label className="cadastro_form-label" htmlFor="name">Nome*</label>
+                                <input
+                                    className="cadastro_form-input"
+                                    type="text"
+                                    name="name"
+                                    id="name"
+                                    value={this.state.name}
+                                    onChange={this.handleInputChange}
+                                    required
+                                />
+                            </div>
 
-                            <label htmlFor="email">Email*</label>
-                            <input
-                                className="input-text"
-                                type="email"
-                                name="email"
-                                id="email"
-                                value={this.state.email}
-                                onChange={this.handleInputChange}
-                                required
-                            />
+                            <div className="cadastro_form-grupo">
 
-                            <label htmlFor="password">Senha*</label>
-                            <input
-                                className="input-text espaco"
-                                type="password"
-                                name="password"
-                                id="password"
-                                value={this.state.password}
-                                onChange={this.handleInputChange}
-                                required
-                            />
-                            <div>
+                                <label className="cadastro_form-label" htmlFor="email">Email*</label>
+                                <input
+                                    className="cadastro_form-input"
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    value={this.state.email}
+                                    onChange={this.handleInputChange}
+                                    required
+                                />
+                            </div>
 
+                            <div className="cadastro_form-grupo">
+                                <label className="cadastro_form-label" htmlFor="telefone">Telefone*</label>
+                                <input
+                                    className="cadastro_form-input"
+                                    type="telefone"
+                                    name="telefone"
+                                    id="telefone"
+                                    value={this.state.telefone}
+                                    onChange={this.handleInputChange}
+                                    required />
+                            </div>
+
+                            <div className="cadastro_form-grupo">
+                                <label className="cadastro_form-label" htmlFor="password">Senha*</label>
+                                <input
+                                    className="cadastro_form-input"
+                                    type="password"
+                                    name="password"
+                                    id="password"
+                                    value={this.state.password}
+                                    onChange={this.handleInputChange}
+                                    required
+                                />
+                            </div>
+
+                            <div className="cadastro_form-grupo-checkbox">
                                 <input className="checkbox" type="checkbox" name="termos" id="termos" required />
-                                <label htmlFor="termos">Aceito os termos de privacidade </label>
+                                <label className="cadastro_form-label" htmlFor="termos">Aceito os termos de privacidade*</label>
                             </div>
 
                             <button
-                                className="espaco"
+                                className="btn_login-cadastro"
                                 type="submit">Cadastrar-se</button>
                         </form>
 
-                        <p className={`espaco erro ${this.state.errorMessage ? '' : 'hidden'}`}>
+                        <p className={` erro ${this.state.errorMessage ? '' : 'hidden'}`}>
                             {this.state.errorMessage}
                         </p>
 
-                        <p className={`espaco success ${this.state.successMessage ? '' : 'hidden'}`}>
+                        <p className={` success ${this.state.successMessage ? '' : 'hidden'}`}>
                             {this.state.successMessage}
                         </p>
 
-                        <p className="espaco weight">Já tem uma conta? <a href="/login" className="cor-destaque">Entre aqui</a></p>
+                        <p className="">Já tem uma conta? <a href="/login" className="">Entre aqui</a></p>
 
-                        <a href="/" className="cor-destaque weight back-start">Voltar ao ínicio</a>
+                        <a href="/" className="">Voltar ao ínicio</a>
 
                     </div>
                 </main>

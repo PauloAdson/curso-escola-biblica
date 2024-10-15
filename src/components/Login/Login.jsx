@@ -60,7 +60,7 @@ export class Login extends React.Component {
     render() {
         return (
             <>
-                <main className="bg-login-cadastro">
+                {/* <main className="bg_cadastro-login">
                     <div className="container-form-login">
                         <div className="container-title">
                             <h1 className="title-form">Faça o seu login</h1>
@@ -100,6 +100,60 @@ export class Login extends React.Component {
                         <p className="espaco weight">Não possui uma conta? <a href="/cadastro" className="cor-destaque">Criar aqui</a></p>
 
                         <a href="/" className="cor-destaque weight back-start">Voltar ao ínicio</a>
+
+                    </div>
+                </main> */}
+
+
+
+                <main className="bg_cadastro-login">
+                    <div className="login_container">
+                        <div className="login_container-title">
+                            <h1 className="title-form">Faça o seu login</h1>
+                            <div className="title-underline-login"></div>
+                        </div>
+
+                        <form className="login_form" action="">
+
+                            <div className="login_form-grupo">
+
+                                <label className="login_form-label" htmlFor="email">Email*</label>
+                                <input
+                                    className="login_form-input"
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    onChange={this.handleEmailChange}
+                                    required
+                                />
+                            </div>
+
+                            <div className="login_form-grupo">
+                                <label className="login_form-label" htmlFor="password">Senha*</label>
+                                <input
+                                    className="login_form-input"
+                                    type="password"
+                                    name="password"
+                                    id="password"
+                                    onChange={this.handlePasswordChange}
+                                    required
+                                />
+                            </div>
+
+                            <button
+                                className="btn_login-cadastro"
+                                type="submit"
+                                onClick={(e) => this.handleLogin(e)}
+                            >Entrar</button>
+                        </form>
+
+                        <p className={` erro ${this.state.errorMessage ? '' : 'hidden'}`}>
+                            {this.state.errorMessage}
+                        </p>
+
+                        <p className="">Não possui uma conta? <a href="/cadastro" className="">Criar aqui</a></p>
+
+                        <a href="/" className="">Voltar ao ínicio</a>
 
                     </div>
                 </main>
